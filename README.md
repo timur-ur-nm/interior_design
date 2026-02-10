@@ -1,53 +1,49 @@
-# React + Vite
+# Interior Design Studio Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website for an interior design studio.  
+The project focuses on clean UI, smooth animations, and structured content presentation to reflect a premium design-oriented brand.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- Responsive layout for desktop, tablet, and mobile devices
+- Smooth scroll-based animations
+- Staggered content appearance for better visual hierarchy
+- Clean typography and minimal design
+- Optimized performance and reusable components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js** – component-based architecture
+- **HTML5 / CSS3 / JavaScript** – core web technologies
+- **Tailwind CSS** – utility-first styling and responsive design
+- **Framer Motion** – animations and scroll interactions
 
+---
 
+## 🎯 Project Goals
 
-src/
- ├─ app/
- │   ├─ App.jsx
- │   └─ main.jsx
- │
- ├─ pages/
- │   ├─ HomePage.jsx
- │   ├─ AboutPage.jsx
- │   └─ ContactPage.jsx
- │
- ├─ components/
- │   ├─ layout/
- │   │   ├─ Header.jsx
- │   │   └─ Footer.jsx
- │   │
- │   ├─ ui/
- │   │   ├─ Button.jsx
- │   │   ├─ Card.jsx
- │   │   └─ Section.jsx
- │   │
- │   └─ sections/
- │       ├─ Hero.jsx
- │       ├─ Features.jsx
- │       └─ Testimonials.jsx
- │
- ├─ assets/
- │   ├─ images/
- │   └─ icons/
- │
- ├─ styles/
- │   └─ globals.css
- │
- └─ index.css
-# interior_design
+- Demonstrate frontend development skills with React
+- Show ability to work with modern styling solutions (Tailwind CSS)
+- Implement smooth and meaningful animations using Framer Motion
+- Create a visually appealing portfolio suitable for a design studio
+
+---
+
+## 📂 Project Structure
+
+- Reusable React components
+- Separate sections for principles, stages, and portfolio content
+- Centralized styling using Tailwind utilities
+- Animation logic handled through Framer Motion variants
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/interior-design-portfolio.git

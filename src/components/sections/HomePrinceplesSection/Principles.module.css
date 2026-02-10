@@ -1,0 +1,19 @@
+.principles_section {
+  padding: clamp(60px, 8vw, 120px) 24px;
+  background: #111; /* или твой цвет */
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.principles_text {
+  max-width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .principles_img {
+    display: none;
+  }
+  .principles_text{
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,137 @@
+/* Hero.css */
+.hero {
+  padding-top: 100px;
+  height: 100vh; /* весь экран */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/assets/hero-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 50px;
+}
+
+
+.icon {
+  width: 30px;
+  height: auto;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.hero_title {
+  font-weight: 300;
+  font-size: 42px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero_image {
+  width: 250px;
+  height: auto;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.icons_list {
+  display: flex;
+  gap: 80px;
+  padding-top: 40px;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.whatsapp_btn {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  border-radius: 50%;
+}
+
+.whatsapp_btn img {
+  width: 100%;
+  height: auto;
+}
+
+.whatsapp_btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Планшет (768px - 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 100vh;
+    gap: 30px;
+    background-size: cover;
+  }
+  .hero_title {
+    font-weight: 300;
+    font-size: 24px;
+  }
+  .hero_image {
+    width: 200px;
+    height: auto;
+  }
+  .icons_list {
+    gap: 60px;
+  }
+}
+
+/* Мобильные устройства (320px - 767px) */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    gap: 30px;
+    padding-top: 0px;
+  }
+
+  .hero_text {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .hero_title {
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+  }
+  .hero_image {
+    width: 200px;
+    height: auto;
+  }
+  .icons_list {
+    display: none;
+  }
+}
+
+/* Мобильные малые (320px - 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    background-size: cover;
+    gap: 30px;
+    padding-top: 0px;
+  }
+  .hero_image {
+    width: 150px;
+    height: auto;
+  }
+}

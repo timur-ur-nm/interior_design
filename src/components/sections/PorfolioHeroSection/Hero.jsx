@@ -1,6 +1,6 @@
 import portfolioheoimage from "@/assets/portfolioheoimage.png";
 import stagesImage from "@/assets/stages.svg";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const stagesData = [
@@ -41,7 +41,6 @@ const stagesData = [
 
 export default function Hero() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3 });
 
   const containerVariants = {
     hidden: {},
@@ -68,20 +67,20 @@ export default function Hero() {
   };
 
   return (
-    <section className="container mx-auto flex gap-10">
+    <section className="container mx-auto flex gap-10 ">
       <img
         src={portfolioheoimage}
         alt="Portfolio Hero"
-        className="w-[50%] object-cover opacity-50"
+        className="hidden xl:block lg:w-1/2 object-cover opacity-50"
       />
 
-      <div className="mt-32 flex gap-10 items-start">
-        <img src={stagesImage} alt="" />
+      <div className="mt-32 flex gap-10 items-start  md:pr-2 md:pl-2 pr-6 pl-6">
+        <img src={stagesImage} alt="stages" className=" hidden xl:block " />
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate="visible" 
           className="flex flex-col"
         >
           {stagesData.map((stage) => (

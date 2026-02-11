@@ -147,7 +147,7 @@ export default function Principles() {
           src={PrinciplesImg}
           alt="Principles"
           className={`${styles.principles_img} absolute top-0 left-0 w-full object-cover`}
-        />
+        />  
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import realizationSectionImage from "@/assets/realizationsectionimage.jpg";
 import styles from './Realization.module.css'
+
 export default function Supervision() {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3 });

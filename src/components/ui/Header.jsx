@@ -70,7 +70,7 @@ export default function Header() {
           </li>
           <li>
             <NavLink
-              to="/portfolio"
+              to="/projects"
               className={({ isActive }) =>
                 `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
               }

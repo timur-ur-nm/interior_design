@@ -1,4 +1,4 @@
-import portfolioheoimage from "@/assets/portfolioheoimage.png";
+import portfolioheoimage from "@/assets/serviceheroimage.png";
 import stagesImage from "@/assets/stages.svg";
 import { motion } from "framer-motion";
 import { useRef } from "react";

@@ -11,7 +11,7 @@ function Home() {
       <AboutSection />
       <Principles />
       <Portfolio />
-      <Contacts></Contacts>
+      <Contacts/>
     </>
   );
 }

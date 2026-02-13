@@ -3,6 +3,7 @@ import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
+import { Link } from "react-router-dom";
 
 const images = [
   { src: portfolio1, alt: "portfolio-1", title: "Аппартаменты в ЖК Долина" },
@@ -64,12 +65,14 @@ export default function Portfolio() {
         ))}
       </div>
       <div className="w-full flex justify-center">
-        <a
-          href="#"
-          className="flex justify-center gap-4 mt-8 items-center border-2 border-white w-fit p-3 hover:bg-white hover:text-black transition-colors duration-300"
+        <Link
+          to="/projects"
+          className="flex items-center gap-4 mt-8 border-2 border-white p-3 w-fit 
+             hover:bg-white hover:text-black hover:border-black 
+             transition-colors duration-300"
         >
           смотреть все проекты
-        </a>
+        </Link>
       </div>
     </section>
   );

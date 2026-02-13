@@ -1,5 +1,5 @@
-import React from 'react'
 import { Routes, Route, useLocation } from "react-router-dom";
+import React from "react";
 
 import Home from "../pages/Home";
 import MainLayout from "../components/layouts/MainLayout";
@@ -7,21 +7,29 @@ import Service from "../pages/Service";
 import Contacts from "../pages/Contacts";
 import About from "../pages/About";
 import Projects from "../pages/Projects";
-import ProjectPage from '../pages/ProjectPage'
+import ProjectPage from '../pages/ProjectPage';
 
-// Мини-компонент прямо в этом файле
-function ScrollToTop() {
+function ScrollToTopOnNavigation() {
   const { pathname } = useLocation();
+  const initialRender = React.useRef(true);
+
   React.useEffect(() => {
+    if (initialRender.current) {
+      // На первой загрузке не скроллим
+      initialRender.current = false;
+      return;
+    }
+    // При переходе по Link скроллим наверх
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
+
   return null;
 }
 
 export default function App() {
   return (
     <>
-      <ScrollToTop /> {/* вставляем один раз */}
+      <ScrollToTopOnNavigation />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />

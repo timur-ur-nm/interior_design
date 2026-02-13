@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "@/data/projects";
 import Hero from "../components/sections/~ProjectHeroSection/Hero";
-
+import Contacts from '@/components/ui/ContactsInfo/Contacts'
 export default function ProjectPage() {
   const { id } = useParams(); // получаем id из URL
   const project = projects.find((p) => p.id === id);
@@ -57,6 +57,8 @@ export default function ProjectPage() {
           ))}
         </div>
       </section>
+
+      <Contacts/>
     </>
   );
 }

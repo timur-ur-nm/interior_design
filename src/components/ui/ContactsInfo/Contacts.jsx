@@ -48,7 +48,7 @@ export default function Contacts() {
                   <img
                     src={item.src}
                     alt="icon"
-                    className="w-10 md:w-12 lg:w-14 h-auto"
+                    className="w-10 md:w-8 lg:w-10 h-auto"
                   />
                 </a>
               );

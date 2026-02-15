@@ -1,16 +1,8 @@
 import styles from "./Portfolio.module.css";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
 import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
 
-const images = [
-  { src: portfolio1, alt: "portfolio-1", title: "Аппартаменты в ЖК Долина" },
-  { src: portfolio2, alt: "portfolio-2", title: "Аппартаменты в ЖК Долина" },
-  { src: portfolio3, alt: "portfolio-3", title: "Аппартаменты в ЖК Долина" },
-  { src: portfolio4, alt: "portfolio-4", title: "Аппартаменты в ЖК Долина" },
-];
+
 
 export default function Portfolio() {
   return (
@@ -19,9 +11,10 @@ export default function Portfolio() {
         Портфолио
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        {images.map((image, index) => (
-          <a
-            key={index}
+        {projects.slice(0,4).map((project) => (
+          <Link
+            key={project.id}
+            to={`/projects/${project.id}`}
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,13 +40,13 @@ export default function Portfolio() {
           transition-opacity duration-300
         "
             >
-              {image.title}
+              {project.title}
             </p>
 
             {/* Image */}
             <img
-              src={image.src}
-              alt={image.alt}
+              src={project.heroImage}
+              alt={project.title}
               className="
           w-full h-full object-cover
           transform
@@ -61,7 +54,7 @@ export default function Portfolio() {
           transition-transform duration-500
         "
             />
-          </a>
+          </Link>
         ))}
       </div>
       <div className="w-full flex justify-center">

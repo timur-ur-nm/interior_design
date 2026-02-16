@@ -5,12 +5,12 @@ import vkIco from "@/assets/icons/vkIcon.png";
 import pinterestIcon from "@/assets/icons/pinterestIcon.png";
 export default function Contacts() {
   return (
-    <section className="container mx-auto mt-28">
-      <h1 className="text-center font-light lg:text-[45px] lg:pb-10  ">
+    <section className="container mx-auto mt-28 pl-6  pr-6 ">
+      <h1 className="text-center font-light lg:text-[45px] lg:pb-10 mb-4 ">
         Контакты
       </h1>
-      <div className="flex justify-around gap-10 items-center">
-        <div className="w-1/2 h-[400px] rounded overflow-hidden">
+      <div className="flex flex-col md:flex-row lg:justify-around gap-10 items-center">
+        <div className="w-full lg:w-1/2 h-[400px] rounded overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12478.135704966324!2d68.775115!3d38.56755079999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1770574532585!5m2!1sru!2s"
             className="w-full h-full border-0"

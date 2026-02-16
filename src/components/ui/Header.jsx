@@ -1,18 +1,24 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "@/assets/logo2.png";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // следим за сменой маршрута
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
+  // Закрываем меню при смене маршрута
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
   return (
-    <header className={`${styles.header}`}>
-      <div className={`container mx-auto flex items-center justify-between `}>
+    <header className={styles.header}>
+      <div className="container mx-auto flex items-center justify-between">
         {/* Logo Image */}
         <NavLink to="/" end>
           <img
@@ -24,6 +30,7 @@ export default function Header() {
             }}
           />
         </NavLink>
+
         {/* Burger Menu Button */}
         <button className={styles.burger_menu} onClick={toggleMenu}>
           <span></span>
@@ -39,7 +46,7 @@ export default function Header() {
               to="/"
               end
               className={({ isActive }) =>
-                `${styles.menu_logo} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_logo} ${isActive ? styles.active : ""}`
               }
             >
               <img
@@ -51,18 +58,20 @@ export default function Header() {
                 }}
               />
             </NavLink>
+
             {/* Burger menu close button */}
             <button className={styles.close_btn} onClick={toggleMenu}>
               ✕
             </button>
           </div>
+
           {/* Menu elements */}
           <li>
             <NavLink
               to="/"
               end
               className={({ isActive }) =>
-                `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_link} ${isActive ? styles.active : ""}`
               }
             >
               Главная
@@ -72,7 +81,7 @@ export default function Header() {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_link} ${isActive ? styles.active : ""}`
               }
             >
               Проекты
@@ -82,7 +91,7 @@ export default function Header() {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_link} ${isActive ? styles.active : ""}`
               }
             >
               Услуги
@@ -92,7 +101,7 @@ export default function Header() {
             <NavLink
               to="/contacts"
               className={({ isActive }) =>
-                `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_link} ${isActive ? styles.active : ""}`
               }
             >
               Контакты
@@ -102,10 +111,10 @@ export default function Header() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `${styles.menu_link} ${styles.menu_link} ${isActive ? styles.active : ""}`
+                `${styles.menu_link} ${isActive ? styles.active : ""}`
               }
             >
-            О нас
+              О нас
             </NavLink>
           </li>
         </ul>

@@ -47,3 +47,5 @@ The project focuses on clean UI, smooth animations, and structured content prese
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/interior-design-portfolio.git
+2. See the real website:
+   https://timur-ur-nm.github.io/interior_design
